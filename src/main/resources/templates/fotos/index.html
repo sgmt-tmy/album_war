@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>Fotos</title>
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.js"></script>
+</head>
+<body>
+    <th:block th:each="foto:${fotos}" th:object="${fotos}">
+        <h1 th:text="*{title}"></h1>
+        <img src="/images/{title}(title=*{title})">
+    </th:block>
+</body>
+</html>
